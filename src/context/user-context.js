@@ -21,7 +21,7 @@ export const userContext = React.createContext();
 export const UserProvider = ({ children }) => {
     const [state, dispatch] = useReducer(userReducer, initialState);
     const loginUser = ({ ...props }) => {
-        console.log(props);
+        console.log("Login User", props);
         dispatch({ type: "LOGIN", paylaod: { ...props } });
     };
 

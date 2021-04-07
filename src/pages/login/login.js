@@ -19,7 +19,7 @@ function Login(props) {
     };
 
     return (
-        <Container fluid>
+        <Container fluid className="login-container">
             <div className="form-wrapper">
                 <Form className="form-body">
                     <Form.Group>
