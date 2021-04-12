@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Spinner } from "react-bootstrap";
 import { UserCard } from "../../components";
 import { apis } from "../../services";
 import "./teachers.css";
 function Teachers() {
-    const [teacherData, setTeachers] = useState([]);
+    const [teacherData, setTeachers] = useState(null);
     useEffect(() => {
         const getTeachers = async () => {
             const { data } = await apis.getAllTeachers();
@@ -12,6 +12,8 @@ function Teachers() {
         };
         getTeachers();
     }, []);
+    if (!teacherData)
+        return <Container><Spinner animation="border" color="secondary" size="lg" style={{ position: "absolute", top: "25vw", left: "50vw" }} /></Container>;
     return (
         <Container>
             <Row>

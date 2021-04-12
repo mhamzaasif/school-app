@@ -13,7 +13,7 @@ function Students() {
         getStudents();
     }, []);
     if (!students)
-        return <Spinner animation="border" color="secondary" size="lg" style={{ position: "absolute", top: "50vw", left: "50vw" }} />;
+        return <Container><Spinner animation="border" color="secondary" size="lg" style={{ position: "absolute", top: "25vw", left: "50vw" }} /></Container>;
     return (
         <Container>
             <Row>
