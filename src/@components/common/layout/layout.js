@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
 import Sidebar from "../sidebar/sidebar";
-import { userContext } from "../../../context/user-context";
 import "./layout.css";
+import { rootContext } from '../../../@context';
 
 function Layout({ component: Component }) {
-    const { logoutUser } = useContext(userContext);
+    const { logoutUser } = useContext(rootContext);
     return (
         <Container fluid>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

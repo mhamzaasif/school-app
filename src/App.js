@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-import { Login, Dashboard, UserProfile, Teachers, Students } from "./pages";
-import Layout from "./components/common/layout/layout";
-import { userContext } from "./context/user-context";
+import { Login, Dashboard, UserProfile, Teachers, Students } from "./@pages";
+import Layout from "./@components/common/layout/layout";
 import './App.css';
+import { rootContext } from "./@context";
 
 function App() {
-  const { state: user } = useContext(userContext);
+  const { user } = useContext(rootContext);
   return (
     <div className="App">
       <Router>

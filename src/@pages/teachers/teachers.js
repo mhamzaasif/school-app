@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col, Container, Spinner } from "react-bootstrap";
-import { UserCard } from "../../components";
-import { apis } from "../../services";
+import { UserCard } from "../../@components";
+import { apis } from "../../@services";
 import "./teachers.css";
 function Teachers() {
     const [teacherData, setTeachers] = useState(null);

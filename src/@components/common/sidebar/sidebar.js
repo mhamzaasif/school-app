@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import * as Icons from "react-bootstrap-icons";
-import Routes from "../../../constants/routes.json";
+import Routes from "../../../@constants/routes.json";
 import "./sidebar.css";
 
 function Sidebar() {

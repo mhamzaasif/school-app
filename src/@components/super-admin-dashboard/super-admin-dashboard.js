@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Spinner, Container, Col } from "react-bootstrap";
 import { DataTable } from "../";
-import { apis } from "../../services";
+import { apis } from "../../@services";
 import "./super-admin-dashboard.css";
 function SuperAdminDashboard() {
     const [students, setStudents] = useState([]);

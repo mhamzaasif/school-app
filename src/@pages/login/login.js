@@ -1,24 +1,17 @@
 import React, { useContext } from 'react';
 import { Formik } from "formik";
 import { Container, Form, Button } from "react-bootstrap";
-import { userContext } from "../../context/user-context";
-import { apis } from "../../services";
 import "./login.css";
+import { rootContext } from '../../@context';
 
 
-function Login(props) {
-    const context = useContext(userContext);
-
-    const login = async (username, password) => {
-        const { data } = await apis.login({ username, password });
-        context.loginUser(data);
-        props.history.push("/");
-    };
+const Login = ({ history }) => {
+    const { loginUser } = useContext(rootContext);
 
     return (
         <Container fluid className="login-container">
             <div className="form-wrapper">
-                <Formik initialValues={{ username: '', password: '' }} onSubmit={login}>
+                <Formik initialValues={{ username: '', password: '' }} onSubmit={({ username, password }) => loginUser({ username, password, history })}>
                     {({ values, handleChange, handleSubmit }) => (
                         <Form className="form-body" onSubmit={handleSubmit}>
                             <Form.Group controlId="username">
@@ -36,7 +29,6 @@ function Login(props) {
                     )}
                 </Formik>
             </div>
-
         </Container>
     );
 }
