@@ -1,0 +1,35 @@
+{
+	"authRoutes": [
+		{
+			"path": "/login",
+			"name": "Login"
+		}
+	],
+	"dashboardRoutes": {
+		"Dashboard": {
+			"path": "/",
+			"name": "Dashboard",
+			"logo": "Speedometer2"
+		},
+		"Payments": {
+			"path": "/payments",
+			"name": "Payments",
+			"logo": "Wallet"
+		},
+		"Dues": {
+			"path": "/Dues",
+			"name": "Dues",
+			"logo": "CreditCard"
+		},
+		"Teachers": {
+			"path": "/teachers",
+			"name": "Teachers",
+			"logo": "PersonCircle"
+		},
+		"Students": {
+			"path": "/students",
+			"name": "Students",
+			"logo": "PersonCircle"
+		}
+	}
+}

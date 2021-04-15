@@ -1,9 +1,0 @@
-.add-user-btn{
-    position: absolute;
-    bottom: 0;
-    right:0;
-    padding: 1rem;
-}
-.add-user-btn:hover{
-    cursor: pointer;
-}

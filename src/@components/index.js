@@ -1,8 +1,7 @@
 import SuperAdminDashboard from "./super-admin-dashboard/super-admin-dashboard";
 import DataTable from "./common/data-table";
 import UserCard from "./common/user-card/user-card";
-export {
-    SuperAdminDashboard,
-    DataTable,
-    UserCard
-};
+import Sidebar from "./common/sidebar/sidebar";
+import Layout from "./common/layout/layout";
+import Loader from "./common/loader/loader";
+export { SuperAdminDashboard, DataTable, UserCard, Sidebar, Layout, Loader };
