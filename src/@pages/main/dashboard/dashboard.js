@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Modal, Button, Form } from "react-bootstrap";
 import { Formik } from "formik";
+import { addUserValidationSchema } from "../../../@services";
 import { PlusCircleFill } from "react-bootstrap-icons";
 import ModalHeader from "react-bootstrap/esm/ModalHeader";
 import "./dashboard.css";
@@ -31,8 +32,9 @@ function Dashboard() {
 							role: "",
 						}}
 						onSubmit={addUser}
+						validationSchema={addUserValidationSchema}
 					>
-						{({ values, handleChange, handleSubmit }) => (
+						{({ values, handleChange, handleSubmit, errors, touched }) => (
 							<Form onSubmit={handleSubmit}>
 								<Form.Group controlId="name">
 									<Form.Label>Name</Form.Label>
@@ -40,7 +42,11 @@ function Dashboard() {
 										type="text"
 										value={values.name}
 										onChange={handleChange}
+										isInvalid={touched.name && errors.name}
 									/>
+									<Form.Control.Feedback type="invalid">
+										{errors.name}
+									</Form.Control.Feedback>
 								</Form.Group>
 								<Form.Group controlId="email">
 									<Form.Label>Email</Form.Label>
@@ -48,7 +54,11 @@ function Dashboard() {
 										type="email"
 										value={values.email}
 										onChange={handleChange}
+										isInvalid={touched.email && errors.email}
 									/>
+									<Form.Control.Feedback type="invalid">
+										{errors.email}
+									</Form.Control.Feedback>
 								</Form.Group>
 								<Form.Group controlId="password">
 									<Form.Label>Password</Form.Label>
@@ -56,7 +66,11 @@ function Dashboard() {
 										type="password"
 										value={values.password}
 										onChange={handleChange}
+										isInvalid={touched.password && errors.password}
 									/>
+									<Form.Control.Feedback type="invalid">
+										{errors.password}
+									</Form.Control.Feedback>
 								</Form.Group>
 								<Form.Group controlId="phoneNumber">
 									<Form.Label>Phone Number</Form.Label>
@@ -64,7 +78,11 @@ function Dashboard() {
 										type="text"
 										value={values.phoneNumber}
 										onChange={handleChange}
+										isInvalid={touched.phoneNumber && errors.phoneNumber}
 									/>
+									<Form.Control.Feedback type="invalid">
+										{errors.phoneNumber}
+									</Form.Control.Feedback>
 								</Form.Group>
 								<Form.Group controlId="role">
 									<Form.Label>Role</Form.Label>
@@ -72,11 +90,16 @@ function Dashboard() {
 										as="select"
 										value={values.role}
 										onChange={handleChange}
+										isInvalid={touched.role && errors.role}
 									>
+										<option></option>
 										<option>Admin</option>
 										<option>Teacher</option>
 										<option>Student</option>
 									</Form.Control>
+									<Form.Control.Feedback type="invalid">
+										{errors.role}
+									</Form.Control.Feedback>
 								</Form.Group>
 								<Modal.Footer>
 									<Button

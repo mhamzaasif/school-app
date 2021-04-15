@@ -1,19 +1,9 @@
 import React, { useContext } from "react";
 import { Formik } from "formik";
-import * as Yup from "yup";
+import { loginSchema } from "../../../@services";
 import { Container, Form, Button } from "react-bootstrap";
 import { rootContext } from "../../../@context";
 import "./login.css";
-
-const loginSchema = Yup.object().shape({
-	username: Yup.string()
-		.min(2, "Too Short Username")
-		.max(50, "Too Long Username")
-		.required("Username is required"),
-	password: Yup.string()
-		.required("Password is required")
-		.min(7, "Password Too Short"),
-});
 
 const Login = ({ history }) => {
 	const { loginUser } = useContext(rootContext);
