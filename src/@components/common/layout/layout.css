@@ -1,0 +1,15 @@
+.container-fluid {
+	/* Overriding bootstrap styles for container to give full page width*/
+	padding: 0px !important;
+}
+.container-layout {
+	display: grid;
+	grid-template-columns: minmax(10rem, 15%) 1fr;
+}
+
+@media only screen and (max-width: 991px) {
+	.container-layout {
+		display: grid;
+		grid-template-columns: 100%;
+	}
+}
