@@ -4,4 +4,13 @@ import UserCard from "./common/user-card/user-card";
 import Sidebar from "./common/sidebar/sidebar";
 import Layout from "./common/layout/layout";
 import Loader from "./common/loader/loader";
-export { SuperAdminDashboard, DataTable, UserCard, Sidebar, Layout, Loader };
+import UserForm from "./common/user-form/user-form";
+export {
+	SuperAdminDashboard,
+	DataTable,
+	UserCard,
+	Sidebar,
+	Layout,
+	Loader,
+	UserForm,
+};

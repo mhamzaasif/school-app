@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 function UserProfile() {
 	// const { id } = useParams(); Table
 
-	return <Container fluid></Container>;
+	return <Container fluid>User profile details go here</Container>;
 }
 
 export default UserProfile;

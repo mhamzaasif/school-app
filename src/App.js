@@ -1,7 +1,16 @@
 import { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
-import { Login, Dashboard, UserProfile, Teachers, Students } from "./@pages";
+import {
+	Login,
+	Dashboard,
+	UserProfile,
+	Teachers,
+	Students,
+	Payments,
+	Dues,
+	AddUser,
+} from "./@pages";
 import { Layout } from "./@components";
 import "./App.css";
 import { rootContext } from "./@context";
@@ -23,7 +32,13 @@ function App() {
 					<Route exact path="/" render={() => protectedRoute(Dashboard)} />
 					<Route path="/teachers" render={() => protectedRoute(Teachers)} />
 					<Route path="/students" render={() => protectedRoute(Students)} />
-					<Route path="/users/:id" render={() => protectedRoute(UserProfile)} />
+					<Route path="/payments" render={() => protectedRoute(Payments)} />
+					<Route
+						path="/teachers/:id"
+						render={() => protectedRoute(UserProfile)}
+					/>
+					<Route path="/dues" render={() => protectedRoute(Dues)} />
+					<Route path="/add" render={() => protectedRoute(AddUser)} />
 					<Route path="/login" component={Login} />
 				</Switch>
 			</Router>

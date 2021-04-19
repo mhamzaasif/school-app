@@ -6,6 +6,10 @@
 	display: grid;
 	grid-template-columns: minmax(10rem, 15%) 1fr;
 }
+.content-area {
+	max-height: 90vh;
+	overflow: auto;
+}
 
 @media only screen and (max-width: 991px) {
 	.container-layout {

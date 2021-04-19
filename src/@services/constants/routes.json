@@ -17,9 +17,14 @@
 			"logo": "Wallet"
 		},
 		"Dues": {
-			"path": "/Dues",
+			"path": "/dues",
 			"name": "Dues",
 			"logo": "CreditCard"
+		},
+		"Add Account": {
+			"path": "/add",
+			"name": "Add Account",
+			"logo": "PlusCircleFill"
 		},
 		"Teachers": {
 			"path": "/teachers",
