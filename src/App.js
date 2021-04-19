@@ -33,10 +33,6 @@ function App() {
 					<Route path="/teachers" render={() => protectedRoute(Teachers)} />
 					<Route path="/students" render={() => protectedRoute(Students)} />
 					<Route path="/payments" render={() => protectedRoute(Payments)} />
-					<Route
-						path="/teachers/:id"
-						render={() => protectedRoute(UserProfile)}
-					/>
 					<Route path="/dues" render={() => protectedRoute(Dues)} />
 					<Route path="/add" render={() => protectedRoute(AddUser)} />
 					<Route path="/login" component={Login} />
