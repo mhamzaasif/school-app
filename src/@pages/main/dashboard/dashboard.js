@@ -12,12 +12,12 @@ function Dashboard() {
 		<Container fluid>
 			<h1>Welcome to the dashboard!</h1>
 			<Modal
-				size="sm"
+				size="lg"
 				show={isModalOpen}
 				onHide={() => setIsModalOpen(false)}
 				centered
 			>
-				<ModalHeader>Add New User</ModalHeader>
+				<ModalHeader closeButton>Add New User</ModalHeader>
 				<Modal.Body>
 					<UserForm />
 				</Modal.Body>
