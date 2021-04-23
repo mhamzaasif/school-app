@@ -12,25 +12,25 @@ const Login = ({ history }) => {
 		<Container fluid className="login-container">
 			<div className="form-wrapper">
 				<Formik
-					initialValues={{ username: "", password: "" }}
-					onSubmit={({ username, password }) =>
-						loginUser({ username, password, history })
+					initialValues={{ email: "", password: "" }}
+					onSubmit={({ email, password }) =>
+						loginUser({ email, password, history })
 					}
 					validationSchema={loginSchema}
 				>
 					{({ values, handleChange, handleSubmit, errors, touched }) => (
 						<Form className="form-body" onSubmit={handleSubmit}>
-							<Form.Group controlId="username">
+							<Form.Group controlId="email">
 								<Form.Control
-									name="username"
+									name="email"
 									size="lg"
-									placeholder="username"
-									value={values.username}
+									placeholder="email"
+									value={values.email}
 									onChange={handleChange}
-									isInvalid={touched.username && errors.username}
+									isInvalid={touched.email && errors.email}
 								/>
 								<Form.Control.Feedback type="invalid">
-									{errors.username}
+									{errors.email}
 								</Form.Control.Feedback>
 							</Form.Group>
 							<Form.Group controlId="password">
@@ -41,6 +41,7 @@ const Login = ({ history }) => {
 									value={values.password}
 									onChange={handleChange}
 									isInvalid={touched.password && errors.password}
+									type="password"
 								/>
 								<Form.Control.Feedback type="invalid">
 									{errors.password}

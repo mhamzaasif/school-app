@@ -1,25 +1,30 @@
 import React from "react";
 import { Formik } from "formik";
 import { Form, Button, Row, Col } from "react-bootstrap";
-import { addUserValidationSchema } from "../../../@services";
+import { addUserValidationSchema, apis } from "../../../@services";
+
+const initialValues = {
+	name: "",
+	email: "",
+	password: "",
+	phoneNumber: "",
+	role: "",
+};
 
 const UserForm = () => {
-	const addUser = async (props) => {
-		console.log(props);
+	const addUser = async ({ name, email, password, role }) => {
+		await apis.addNewUser({ name, email, password, role });
 	};
 
 	return (
 		<>
 			<h3>Add New User</h3>
 			<Formik
-				initialValues={{
-					name: "",
-					email: "",
-					password: "",
-					phoneNumber: "",
-					role: "",
+				initialValues={initialValues}
+				onSubmit={(values, actions) => {
+					addUser(values);
+					actions.resetForm(initialValues);
 				}}
-				onSubmit={addUser}
 				validationSchema={addUserValidationSchema}
 			>
 				{({ values, handleChange, handleSubmit, errors, touched }) => (
@@ -109,9 +114,9 @@ const UserForm = () => {
 										isInvalid={touched.role && errors.role}
 									>
 										<option></option>
-										<option>Admin</option>
-										<option>Teacher</option>
-										<option>Student</option>
+										<option value="admin">Admin</option>
+										<option value="teacher">Teacher</option>
+										<option value="student">Student</option>
 									</Form.Control>
 									<Form.Control.Feedback type="invalid">
 										{errors.role}

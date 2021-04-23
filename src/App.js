@@ -4,7 +4,6 @@ import { Redirect } from "react-router-dom";
 import {
 	Login,
 	Dashboard,
-	UserProfile,
 	Teachers,
 	Students,
 	Payments,
@@ -19,7 +18,7 @@ function App() {
 	const { user } = useContext(rootContext);
 
 	const protectedRoute = (component) => {
-		if (user.id) {
+		if (user.token) {
 			return <Layout component={component} />;
 		}
 		return <Redirect to="/login" />;
