@@ -1,19 +1,37 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import { PersonCircle } from "react-bootstrap-icons";
-// import "./user-card.css";
+import { Link, useRouteMatch } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
+import { PersonCircle, Trash2, PencilSquare } from "react-bootstrap-icons";
 
-const UserCard = ({ name = "", email = "", phone = "" }) => {
+import "./user-card.css";
+
+const UserCard = ({ id, name = "", email = "", phone = "" }) => {
+	const { url } = useRouteMatch();
 	return (
-		<Card className="text-center mb-2" bg="dark" text="light" border="light">
-			<Card.Header>
-				<PersonCircle size={50} />
-			</Card.Header>
-			<Card.Body>
-				<Card.Text>Name : {name}</Card.Text>
-				<Card.Text>Email : {email}</Card.Text>
-				<Card.Text>Phone : {phone}</Card.Text>
-			</Card.Body>
+		<Card
+			className="text-center mb-2 user-card"
+			bg="dark"
+			text="light"
+			border="light"
+		>
+			<Link to={`${url}/${id}`}>
+				<Card.Header>
+					<PersonCircle size={50} />
+				</Card.Header>
+				<Card.Body>
+					<Card.Text>Name : {name}</Card.Text>
+					<Card.Text>Email : {email}</Card.Text>
+					<Card.Text>Phone : {phone}</Card.Text>
+				</Card.Body>
+			</Link>
+			<Card.Footer>
+				<Button className="m-1" variant="danger">
+					Delete <Trash2 />
+				</Button>
+				<Button className="m-1" variant="info">
+					Update <PencilSquare />
+				</Button>
+			</Card.Footer>
 		</Card>
 	);
 };

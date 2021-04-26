@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
-import { useRouteMatch, Switch, Route, Link } from "react-router-dom";
+import { useRouteMatch, Switch, Route } from "react-router-dom";
 import { Loader, UserCard } from "../../../@components";
 import { apis } from "../../../@services";
 import UserProfile from "../user-profile/user-profile";
 import "./teachers.css";
 function Teachers() {
-	const { path, url } = useRouteMatch();
+	const { path } = useRouteMatch();
 	const [teacherData, setTeachers] = useState(null);
 	useEffect(() => {
 		const getTeachers = async () => {
 			const { data } = await apis.getAllTeachers();
-			setTeachers(data.teachers);
+			setTeachers(data);
 		};
 		getTeachers();
 	}, []);
@@ -23,14 +23,13 @@ function Teachers() {
 					{teacherData.map((teacher, index) => {
 						return (
 							<Col md={6} lg={4} key={index}>
-								<Link key={index} to={`${url}/${teacher.id}`}>
-									<UserCard
-										key={index}
-										name={teacher.name}
-										email={teacher.email}
-										phone={teacher.phone}
-									/>
-								</Link>
+								<UserCard
+									key={index}
+									id={teacher.id}
+									name={teacher.name}
+									email={teacher.email}
+									phone={teacher.phone}
+								/>
 							</Col>
 						);
 					})}

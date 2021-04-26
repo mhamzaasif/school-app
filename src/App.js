@@ -16,9 +16,8 @@ import { rootContext } from "./@context";
 
 function App() {
 	const { user } = useContext(rootContext);
-
 	const protectedRoute = (component) => {
-		if (user.token) {
+		if (user?.token) {
 			return <Layout component={component} />;
 		}
 		return <Redirect to="/login" />;
