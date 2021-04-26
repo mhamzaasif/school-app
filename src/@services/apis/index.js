@@ -7,6 +7,8 @@ export const apis = {
 	getAllStudents: () => api(endpoints.getAllStudents),
 	getAllTeachers: () => api(endpoints.getAllTeachers),
 	getAllAdmins: () => api(endpoints.getAllAdmins),
+	addNewUser: (data) => api(endpoints.addNewUser, data),
+	getAllDues: () => api(endpoints.getAllDues),
 };
 
 Axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;

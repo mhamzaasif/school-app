@@ -1,9 +1,10 @@
 .user-card > a {
 	text-decoration: none;
-	color: white;
+	color: var(--dark);
 }
 
 .user-card > a:hover {
 	text-decoration: none;
-	color: white;
+	text-transform: none;
+	color: var(--dark);
 }

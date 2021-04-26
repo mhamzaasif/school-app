@@ -18,7 +18,7 @@ function Sidebar() {
 							to={Routes.dashboardRoutes[route].path}
 							className="sidebar-nav-link"
 						>
-							<Icon color="white" /> {Routes.dashboardRoutes[route].name}
+							<Icon /> {Routes.dashboardRoutes[route].name}
 						</Nav.Link>
 					);
 				})}

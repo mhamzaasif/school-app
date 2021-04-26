@@ -5,7 +5,7 @@ import "./dashboard.css";
 function Dashboard() {
 	return (
 		<Container fluid>
-			<h1>Welcome to the dashboard!</h1>
+			<h1 className="text-center">Welcome to the dashboard!</h1>
 		</Container>
 	);
 }

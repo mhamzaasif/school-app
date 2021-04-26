@@ -1,4 +1,4 @@
-import { Students, User, Teachers, Admins } from "../mocks";
+import { Students, User, Teachers, Admins, Dues } from "../mocks";
 
 function endPoint(address, type, guarded, testData) {
 	this.address = address;
@@ -23,6 +23,7 @@ const endPoints = {
 	),
 	getAllAdmins: new endPoint("/admins", "GET", true, Admins),
 	addNewUser: new endPoint("/super-admin/create-users", "POST", true, null),
+	getAllDues: new endPoint("/super-admin/get-dues", "GET", true, Dues),
 };
 
 export default endPoints;

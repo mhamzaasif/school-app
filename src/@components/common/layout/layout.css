@@ -7,7 +7,7 @@
 	grid-template-columns: minmax(10rem, 15%) 1fr;
 }
 .content-area {
-	max-height: 90vh;
+	max-height: calc(100vh - 58px);
 	overflow: auto;
 }
 

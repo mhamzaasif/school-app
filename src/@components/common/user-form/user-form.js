@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik } from "formik";
-import { Form, Button, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col, Toast } from "react-bootstrap";
 import { addUserValidationSchema, apis } from "../../../@services";
 
 const initialValues = {
@@ -12,13 +12,17 @@ const initialValues = {
 };
 
 const UserForm = () => {
+	const [showToast, setShowToast] = useState(false);
 	const addUser = async ({ name, email, password, role }) => {
 		await apis.addNewUser({ name, email, password, role });
+		setShowToast(true);
 	};
 
 	return (
 		<>
-			<h3>Add New User</h3>
+			<div className="text-center p-3">
+				<h3>Add New User</h3>
+			</div>
 			<Formik
 				initialValues={initialValues}
 				onSubmit={(values, actions) => {
@@ -132,6 +136,18 @@ const UserForm = () => {
 					</Form>
 				)}
 			</Formik>
+			<Toast
+				delay={3000}
+				autohide
+				show={showToast}
+				onClose={() => setShowToast(false)}
+				style={{ position: "absolute", top: 0, right: 0 }}
+			>
+				<Toast.Header className="text-success">Success</Toast.Header>
+				<Toast.Body className="text-success">
+					User Added successfully
+				</Toast.Body>
+			</Toast>
 		</>
 	);
 };

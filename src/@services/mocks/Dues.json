@@ -1,0 +1,152 @@
+[
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-01-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 3,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": true,
+		"id": 4,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 5,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 6,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 7,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 8,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-01-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 3,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": true,
+		"id": 4,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 5,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 6,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 7,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 8,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-01-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 3,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": true,
+		"id": 4,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 5,
+		"fine": 500
+	},
+
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 6,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 7,
+		"fine": 500
+	},
+	{
+		"amount": 1500,
+		"userId": 36,
+		"dueDate": "2021-11-01T10:07:23.000Z",
+		"isPaid": false,
+		"id": 8,
+		"fine": 500
+	}
+]

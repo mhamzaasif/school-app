@@ -10,9 +10,9 @@ const UserCard = ({ id, name = "", email = "", phone = "" }) => {
 	return (
 		<Card
 			className="text-center mb-2 user-card"
-			bg="dark"
-			text="light"
-			border="light"
+			bg="light"
+			text="dark"
+			border="dark"
 		>
 			<Link to={`${url}/${id}`}>
 				<Card.Header>
