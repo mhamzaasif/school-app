@@ -35,7 +35,7 @@ function Layout({ component: Component }) {
 				<div className="d-none d-lg-block">
 					<Sidebar />
 				</div>
-				<div className="content-area pt-3">
+				<div className="content-area">
 					<Component />
 				</div>
 			</div>
