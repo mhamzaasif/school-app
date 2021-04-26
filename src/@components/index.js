@@ -5,6 +5,7 @@ import Sidebar from "./common/sidebar/sidebar";
 import Layout from "./common/layout/layout";
 import Loader from "./common/loader/loader";
 import UserForm from "./common/user-form/user-form";
+import LoadingWrapper from "./common/loading-wrapper";
 export {
 	SuperAdminDashboard,
 	DataTable,
@@ -13,4 +14,6 @@ export {
 	Layout,
 	Loader,
 	UserForm,
+	LoadingWrapper,
 };
+
