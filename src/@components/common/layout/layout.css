@@ -15,5 +15,17 @@
 	.container-layout {
 		display: grid;
 		grid-template-columns: 100%;
+		height: calc(100vh - 58px);
 	}
+	.sidebar {
+		height: calc(100vh - 58px);
+	}
+}
+.responsive-sidebar {
+	position: absolute;
+	top: 58px;
+	left: 0rem;
+	height: calc(100vh - 58px);
+	background-color: whitesmoke;
+	z-index: 1;
 }
