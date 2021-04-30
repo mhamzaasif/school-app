@@ -8,3 +8,23 @@
 	text-transform: none;
 	color: var(--dark);
 }
+
+.card__button-delete {
+	color: var(--danger) !important;
+	background-color: white !important;
+}
+
+.card__button-delete:hover {
+	color: white !important;
+	background-color: var(--danger) !important;
+}
+
+.card__button-update {
+	color: var(--info) !important;
+	background-color: white !important;
+}
+
+.card__button-update:hover {
+	color: white !important;
+	background-color: var(--info) !important;
+}

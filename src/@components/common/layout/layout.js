@@ -16,15 +16,21 @@ function Layout({ component: Component }) {
 					onClick={() => setToggleSidebar((prevState) => !prevState)}
 				/>
 				<div
-					className={`${toggleSidebar ? "responsive-sidebar px-3" : "d-none"}`}
+					className={`d-block d-lg-none responsive-sidebar bg-light ${
+						toggleSidebar ? "sidebar-open" : ""
+					}`}
 				>
 					<Sidebar />
 				</div>
-				<Navbar.Brand as={Link} to="/">
+				<Navbar.Brand as={Link} to="/" className="px-1">
 					School ABC
 				</Navbar.Brand>
-				<Nav className="ml-auto">
-					<Nav.Link as={Button} onClick={() => logoutUser()}>
+				<Nav className="ml-auto" navbar={false}>
+					<Nav.Link
+						as={Button}
+						onClick={() => logoutUser()}
+						className="logout-button"
+					>
 						Logout
 					</Nav.Link>
 				</Nav>

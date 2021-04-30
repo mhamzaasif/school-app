@@ -25,10 +25,10 @@ const UserCard = ({ id, name = "", email = "", phone = "" }) => {
 				</Card.Body>
 			</Link>
 			<Card.Footer>
-				<Button className="m-1" variant="danger">
+				<Button className="m-1 card__button-delete" variant="danger">
 					Delete <Trash2 />
 				</Button>
-				<Button className="m-1" variant="info">
+				<Button className="m-1 card__button-update" variant="info">
 					Update <PencilSquare />
 				</Button>
 			</Card.Footer>

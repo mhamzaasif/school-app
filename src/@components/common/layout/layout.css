@@ -24,8 +24,23 @@
 .responsive-sidebar {
 	position: absolute;
 	top: 58px;
-	left: 0rem;
+	left: -10rem;
 	height: calc(100vh - 58px);
 	background-color: whitesmoke;
 	z-index: 1;
+	transition: transform 1s ease-in-out;
+}
+
+.sidebar-open {
+	transform: translateX(10rem);
+}
+
+.logout-button {
+	background-color: white !important;
+	color: var(--primary) !important;
+}
+
+.logout-button:hover {
+	color: white !important;
+	background-color: var(--primary) !important;
 }
