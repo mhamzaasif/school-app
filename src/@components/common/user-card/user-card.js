@@ -15,13 +15,19 @@ const UserCard = ({ id, name = "", email = "", phone = "" }) => {
 			border="dark"
 		>
 			<Link to={`${url}/${id}`}>
-				<Card.Header>
+				<Card.Header className="text-center">
 					<PersonCircle size={50} />
 				</Card.Header>
-				<Card.Body>
-					<Card.Text>Name : {name}</Card.Text>
-					<Card.Text>Email : {email}</Card.Text>
-					<Card.Text>Phone : {phone}</Card.Text>
+				<Card.Body className="text-left">
+					<Card.Text>
+						<strong>Name :</strong> {name}
+					</Card.Text>
+					<Card.Text>
+						<strong>Email :</strong> {email}
+					</Card.Text>
+					<Card.Text>
+						<strong>Phone :</strong> {phone}
+					</Card.Text>
 				</Card.Body>
 			</Link>
 			<Card.Footer>

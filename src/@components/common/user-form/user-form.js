@@ -31,8 +31,15 @@ const UserForm = () => {
 				}}
 				validationSchema={addUserValidationSchema}
 			>
-				{({ values, handleChange, handleSubmit, errors, touched }) => (
-					<Form onSubmit={handleSubmit}>
+				{({
+					values,
+					handleChange,
+					handleSubmit,
+					errors,
+					touched,
+					handleReset,
+				}) => (
+					<Form onSubmit={handleSubmit} onReset={handleReset}>
 						<Form.Group controlId="name">
 							<Row>
 								<Col sm="2">
@@ -128,8 +135,11 @@ const UserForm = () => {
 								</Col>
 							</Row>
 						</Form.Group>
-						<Form.Group>
-							<Button variant="success" type="submit">
+						<Form.Group className="text-right">
+							<Button variant="danger" type="reset" className="mx-2">
+								Cancel
+							</Button>
+							<Button variant="success" type="submit" className="mx-2">
 								Save
 							</Button>
 						</Form.Group>

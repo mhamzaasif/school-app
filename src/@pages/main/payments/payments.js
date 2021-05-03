@@ -56,7 +56,7 @@ const Payments = () => {
 								onChange={handleChange}
 							/>
 						</Form.Group>
-						<Form.Group>
+						<Form.Group className="text-right">
 							<Button
 								variant="danger"
 								type="reset"
